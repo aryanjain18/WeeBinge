@@ -1,4 +1,5 @@
 const API_URL = "https://kitsu.io/api/edge/anime";
+const SEARCH_API = "https://kitsu.io/api/edge/anime?filter[text]=";
 const IMG_PATH = "https://media.kitsu.io/anime/poster_images/";
 const main = document.getElementById("main");
 const form = document.getElementById("form");
@@ -87,62 +88,46 @@ function showRecommendedAnime(animeList) {
 }
 
 function searchAnime(animeList) {
-  main.innerHTML = "";
-  const searchedMovies = document.createElement("div");
-  searchedMovies.innerHTML = "<h2>Search Results</h2>";
-
-  animeList.forEach((anime) => {
-    const { attributes } = anime;
-    const { canonicalTitle, averageRating, synopsis, posterImage } = attributes;
-
-    const animeElement = createAnimeElement(
-      canonicalTitle,
-      averageRating,
-      synopsis,
-      posterImage
-    );
-    animeElement.classList.add("anime-s");
-
-    searchedMovies.appendChild(animeElement);
-  });
-
-  main.appendChild(searchedMovies);
-}
-
-function createAnimeElement(title, rating, synopsis, poster) {
-  const animeElement = document.createElement("div");
-  animeElement.classList.add("anime");
-
-  animeElement.innerHTML = `
-    <img src="${
-      poster ? IMG_PATH + poster?.original : "https://via.placeholder.com/150"
-    }" alt="${title}">
-    <div class="anime-info">
-      <h3>${title}</h3>
-      <span class="rating">Rating: ${rating || "N/A"}</span>
-    </div>
-    <div class="synopsis">
-      <p>${synopsis || "No synopsis available"}</p>
-      <div class="buttons">
-        <button class="watch-now">Watch now</button>
-        <button class="watch-later">+</button>
-      </div>
-    </div>
-  `;
-
-  return animeElement;
-}
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const searchTerm = search.value.trim();
-  if (searchTerm !== "") {
-    const searchUrl = `${API_URL}?filter[text]=${encodeURIComponent(
-      searchTerm
-    )}`;
-    await getAnime(searchUrl);
-  } else {
-    await getAnime(API_URL);
+    main.innerHTML = "";
+    const searchedAnime = document.createElement("div");
+    searchedAnime.classList.add("searched");
+    main.appendChild(searchedAnime);
+  
+    animeList.forEach((anime) => {
+      const { attributes } = anime; // Destructure attributes directly from anime
+      const { canonicalTitle, averageRating, synopsis, posterImage } = attributes;
+  
+      const animeElement = document.createElement("div");
+      animeElement.classList.add("movie-s");
+      animeElement.innerHTML = ` 
+        <img src="${posterImage?.original || "https://via.placeholder.com/150"}" alt="${canonicalTitle}">
+        <div class="movie-info">
+          <h3>${canonicalTitle}</h3>
+          <span class="vote">★ ${averageRating}</span>
+        </div>
+        <div class="overview hidden">
+          <h3>${canonicalTitle}</h3> 
+          <p>${synopsis}</p>
+          <div class="buttons">
+            <button class="watch-now">Watch now</button>
+            <button class="watch-later">+</button>
+          </div>
+        </div>
+      `;
+  
+      searchedAnime.appendChild(animeElement); // Append animeElement, not movieElement
+    });
   }
-});
+  
+
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  
+    const searchTerm = search.value;
+    if (searchTerm && searchTerm !== "") {
+      getAnime(SEARCH_API + searchTerm);
+    } else {
+      window.location.reload();
+    }
+  });
