@@ -38,11 +38,11 @@ function showRecommendedAnime(animeList) {
 
   animeList.forEach((anime, index) => {
     const { attributes } = anime;
-    const { canonicalTitle, averageRating, synopsis, posterImage } = attributes;
+    const { canonicalTitle, averageRating, synopsis, posterImage, youtubeVideoId } = attributes;
 
     const animeElement = document.createElement("div");
 
-    if (index < 5) {
+    if (index < 6) {
       animeElement.classList.add("movie-l");
       animeElement.innerHTML = `
       <img src="${
@@ -51,7 +51,7 @@ function showRecommendedAnime(animeList) {
       <div class="movie-info">
         <h3>${canonicalTitle}</h3>
       </div>
-      <div class="overview" ${index >= 5 ? "hidden" : "visible"}">
+      <div class="overview" ${index >= 6 ? "hidden" : "visible"}">
       <p>${synopsis}</p>
       <div class="buttons">
           <button class="watch-now">Watch now</button>
@@ -69,7 +69,7 @@ function showRecommendedAnime(animeList) {
            <h3>${canonicalTitle}</h3>
            <span class="vote">★ ${averageRating}</span>
        </div>
-       <div class="overview ${index >= 5 ? "hidden" : "visible"}">
+       <div class="overview ${index >= 6 ? "hidden" : "visible"}">
        <h3>${canonicalTitle}</h3> 
            <p>${synopsis}</p>
            <div class="buttons">
@@ -78,8 +78,17 @@ function showRecommendedAnime(animeList) {
            </div>
        </div>
   `;
+    // Add event listener to the "Watch now" button
+    const watchNowButton = animeElement.querySelector('.watch-now');
+    watchNowButton.addEventListener('click', () => {
+        if (youtubeVideoId) {
+            window.location.href = 'https://www.youtube.com/watch?v=' + youtubeVideoId;
+          } else {
+            console.error('No YouTube video ID available.');
+          }
+    });
     }
-    if (index < 5) {
+    if (index < 6) {
       horizontalLine.appendChild(animeElement);
     } else {
       recommendedAnime.appendChild(animeElement);
@@ -95,7 +104,7 @@ function searchAnime(animeList) {
   
     animeList.forEach((anime) => {
       const { attributes } = anime; // Destructure attributes directly from anime
-      const { canonicalTitle, averageRating, synopsis, posterImage } = attributes;
+      const { canonicalTitle, averageRating, synopsis, posterImage, youtubeVideoId } = attributes;
   
       const animeElement = document.createElement("div");
       animeElement.classList.add("movie-s");
@@ -114,6 +123,11 @@ function searchAnime(animeList) {
           </div>
         </div>
       `;
+      // Add event listener to the "Watch now" button
+      const watchNowButton = animeElement.querySelector('.watch-now');
+      watchNowButton.addEventListener('click', () => {
+        window.location.href = 'https://www.youtube.com/watch?v='+youtubeVideoId;
+      });
   
       searchedAnime.appendChild(animeElement); // Append animeElement, not movieElement
     });
