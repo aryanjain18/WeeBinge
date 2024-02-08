@@ -1,0 +1,120 @@
+:root {
+    --primary-color:#403c55 ;
+    --secondary-color: #181625;
+    --accent-color: rgb(168, 118, 170);
+  }
+  
+  body {
+    overflow: none;
+    background-color: var(--primary-color);
+  }
+  
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    height: 0.15em;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    margin-top: 0.9cm;
+  }
+  
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    bottom: 60px;
+    left: 260px;
+    color: white;
+  }
+  
+  .navbar-fixed-top {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 75px;
+    background-color: var(--secondary-color);
+    z-index: 999;
+  }
+  
+  .nav__item {
+    display: inline-block;
+  }
+  
+  .nav__link {
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+    transition: border-bottom-color 0.5s ease-out, border-top-color 0.5s ease-out;
+  }
+  
+  .nav__link:hover {
+    color: white;
+    border-bottom-color: white;
+    border-top-color: white;
+  }
+  
+  p {
+    width: 700px;
+    height: 90px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .para {
+    display: inline-block;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    text-align: center;
+    width: auto; 
+    margin-left: 9cm;
+}
+
+
+
+  .mySlides {
+    position: relative;
+    height: 300px;
+    width: 1200px;
+    margin-top: 5cm;
+    margin-right: 3cm;
+    margin-left: 3cm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .button {
+    height: 3.5em;
+    width: 10%;
+    padding: 8px;
+    margin: 1em auto;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    transition: all 0.2s cubic-bezier(.4, 0, .2, 1);
+    left: 458px;
+    bottom: 280px;
+  }
+  
+  .button {
+    position: relative;
+    bottom: 40px;
+    margin-right: 5px;
+  }
+  
+  .button:hover {
+    width: 12%;
+    letter-spacing: 0.8em;
+    background-color: var(--accent-color);
+  }
