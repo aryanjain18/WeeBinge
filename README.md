@@ -14,21 +14,11 @@ Wee-Binge is a feature-rich web application that serves as your gateway to the w
 - **Search Functionality**: Easily search for your favorite anime titles.
 - **Responsive Design**: The application is designed to work seamlessly on various devices.
 
-## Screenshots
-
-![Screenshot 1](Screenshot1.png)
-![Screenshot 2](Screenshot2.png)
-![Screenshot 3](Screenshot3.png)
-
 ## Technologies Used
 
 - HTML5
 - CSS3
 - JavaScript
-- MongoDB
-- Express.js
-- React.js
-- Node.js
 
 ## Setup
 
@@ -67,3 +57,10 @@ To ensure smooth deployment and scalability, we aim to deploy Wee-Binge using cl
 ### Client-Server Architecture using MERN Stack
 
 We are working towards developing a robust client-server architecture using the MERN (MongoDB, Express.js, React.js, Node.js) stack. This will provide a scalable and maintainable structure for the application, enabling seamless communication between the client-side and server-side components.
+
+---
+## Screenshots
+
+![Screenshot 1](Screenshot1.png)
+![Screenshot 2](Screenshot2.png)
+![Screenshot 3](Screenshot3.png)
