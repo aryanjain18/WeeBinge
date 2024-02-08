@@ -16,9 +16,9 @@ Wee-Binge is a feature-rich web application that serves as your gateway to the w
 
 ## Screenshots
 
-![Screenshot 1](link_to_screenshot_1)
-![Screenshot 2](link_to_screenshot_2)
-![Screenshot 3](link_to_screenshot_3)
+![Screenshot 1](Screenshot1.png)
+![Screenshot 2](Screenshot2.png)
+![Screenshot 3](Screenshot3.png)
 
 ## Technologies Used
 
@@ -33,8 +33,7 @@ Wee-Binge is a feature-rich web application that serves as your gateway to the w
 ## Setup
 
 1. Clone the repository.
-2. Open the `index.html` file in your preferred web browser.
-3. For server setup, navigate to the `server` directory and run `npm install`, followed by `npm start`.
+2. Open the `mainpage.html` file in your preferred web browser.
 
 ## Usage
 
