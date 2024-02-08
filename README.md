@@ -1,74 +1,70 @@
-# Wee-Binge - Anime Recommendation Website
+# Wee-Binge
 
-Wee-Binge is a web application designed to provide anime enthusiasts with a platform to discover and explore recommended anime titles. The application utilizes the Kitsu API to fetch anime data, allowing users to search for specific titles or enjoy a curated list of recommended anime.
+Welcome to Wee-Binge - Your Anime Hub
+
+## Description
+
+Wee-Binge is a feature-rich web application that serves as your gateway to the world of anime. Discover captivating stories, breathtaking animation, and unforgettable characters with our carefully curated anime recommendations. Whether you're a seasoned otaku or just diving into the anime universe, AnimeHub is your go-to source for the latest and greatest in Japanese animation.
 
 ## Features
 
-### 1. **Sleek and Responsive Design**
-   - The website features a clean and modern design, ensuring a pleasant user experience.
-   - Responsive layout to adapt seamlessly to different screen sizes.
+- **Top Picks**: Explore the top anime picks with just a click.
+- **Automatic Carousel**: Enjoy a dynamic carousel of anime images on the main page.
+- **Anime Recommendations**: Get personalized anime recommendations based on your preferences.
+- **Search Functionality**: Easily search for your favorite anime titles.
+- **Responsive Design**: The application is designed to work seamlessly on various devices.
 
-### 2. **Search Functionality**
-   - Users can search for anime titles using the search bar located in the header.
-   - The search functionality leverages the Kitsu API to fetch and display relevant anime based on user queries.
+## Screenshots
 
-### 3. **Anime Recommendations**
-   - The main page displays a curated list of recommended anime titles for users to explore.
-   - Each anime recommendation includes essential information such as title, image, synopsis, and user ratings.
-
-### 4. **Detailed Information**
-   - Clicking on an anime title reveals detailed information, including a brief overview and additional options to watch now or add to the watch later list.
-
-### 5. **Watch Now Feature**
-   - Users can click the "Watch now" button to be directed to the corresponding YouTube video (if available).
-
-### 6. **Watch Later List**
-   - The "Watch later" button allows users to add anime titles to their watch later list.
-
-### 7. **Footer**
-   - The footer provides credit to the creators of Wee-Binge.
+![Screenshot 1](link_to_screenshot_1)
+![Screenshot 2](link_to_screenshot_2)
+![Screenshot 3](link_to_screenshot_3)
 
 ## Technologies Used
 
-- **HTML:** The structure of the web pages.
-- **CSS:** Styling and layout.
-- **JavaScript:** Interactivity and dynamic content.
-- **Font Awesome:** Icons for an enhanced visual experience.
-- **Google Fonts:** Custom fonts for a modern aesthetic.
-- **Kitsu API:** Fetching anime data for recommendations and search functionality.
+- HTML5
+- CSS3
+- JavaScript
+- MongoDB
+- Express.js
+- React.js
+- Node.js
 
-## How to Use
+## Setup
 
-1. **Homepage:**
-   - Explore the curated list of recommended anime titles.
-   - Utilize the search bar to find specific anime titles.
+1. Clone the repository.
+2. Open the `index.html` file in your preferred web browser.
+3. For server setup, navigate to the `server` directory and run `npm install`, followed by `npm start`.
 
-2. **Detailed Information:**
-   - Click on an anime title to view detailed information and options to watch now or add to the watch later list.
+## Usage
 
-3. **Search:**
-   - Use the search bar to find anime titles based on specific queries.
+- Click on "Top Picks" to explore recommended anime.
+- Use the search bar to find specific anime titles.
+- Enjoy the carousel of anime images on the main page.
 
-4. **Watch Now:**
-   - Click the "Watch now" button to be redirected to the corresponding YouTube video.
+## Contributing
 
-5. **Watch Later:**
-   - Click the "+" button to add an anime to your watch later list.
+If you'd like to contribute to Wee-Binge, please follow the steps outlined in the Contributing section of the README.
 
-6. **Footer:**
-   - The footer provides information about the creators of Wee-Binge.
+---
 
-## Contributors
+## Credits
 
 - Aryan Jain
 - Abhishek Jha
 - Aarav Amawate
 - Angadjeet Singh
 
-## Acknowledgments
+## Further Scope
 
-Wee-Binge acknowledges the use of the Kitsu API for fetching anime data, Font Awesome for icons, and Google Fonts for custom typography.
+### Machine Learning for Top Picks
 
----
+In the future, we plan to enhance the "Top Picks" feature by implementing machine learning algorithms. This will allow us to provide users with more accurate and personalized anime recommendations based on their viewing history, preferences, and trends within the anime community.
 
-*Note: Ensure an internet connection for optimal functionality, as the application relies on the Kitsu API to fetch anime data.*
+### Deployment with Heroku/Docker
+
+To ensure smooth deployment and scalability, we aim to deploy Wee-Binge using cloud platforms like Heroku. Additionally, we'll implement Docker containers to encapsulate the application and its dependencies, making deployment and scaling more efficient.
+
+### Client-Server Architecture using MERN Stack
+
+We are working towards developing a robust client-server architecture using the MERN (MongoDB, Express.js, React.js, Node.js) stack. This will provide a scalable and maintainable structure for the application, enabling seamless communication between the client-side and server-side components.
