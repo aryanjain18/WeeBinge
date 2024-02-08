@@ -1,5 +1,5 @@
 # Dui
-aryan jain \n
-angadjeet singh \n
-abhishek jha \n
-arav amawate \n
+aryan jain <br />
+angadjeet singh <br />
+abhishek jha <br />
+arav amawate <br />
