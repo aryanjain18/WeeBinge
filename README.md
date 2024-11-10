@@ -20,8 +20,6 @@ Wee-Binge is a feature-rich web application that serves as your gateway to the w
 - CSS3
 - JavaScript
 
----
-
 ## Setup
 
 1. Clone the repository.
@@ -38,8 +36,6 @@ Wee-Binge is a feature-rich web application that serves as your gateway to the w
 ![Screenshot 1](Screenshot1.png)
 ![Screenshot 2](Screenshot2.png)
 ![Screenshot 3](Screenshot3.png)
-
----
 
 ## Further Scope
 
